@@ -57,3 +57,28 @@ session_info → base session data joined with A/B test info
 | 2025-10-01 | US      | mobile | NA        | organic | A    | control    | new account        | 45    |
 | 2025-10-01 | US      | mobile | NA        | organic | A    | control    | purchase_click     | 567   |
 
+# 📈 Conversion Funnel A/B Testing Analysis
+
+This repository contains a Python script designed to analyze A/B test results. It calculates the statistical significance (Z-test for proportions) for four key conversion funnel metrics and generates structured conclusions and recommendations for each test.
+
+---
+
+## Key Features
+
+* **Statistical Significance Calculation:** Performs a two-sided Z-test for proportions to compare conversion rates between the control and test groups.
+* **Metric Analysis:** Analyzes four primary, session-based metrics.
+* **Structured Output:** Generates summarized results including **P-Value**, **Z-Stat**, and clear implementation recommendations.
+* **Overall Test Significance:** Significance is calculated across the total observed volume for each specific test.
+
+---
+
+## 📊 Metrics Analyzed
+
+The script analyzes the following conversion metrics, using the total number of **sessions** as the denominator (base):
+
+| Metric Name | Numerator (Event) | Denominator (Base) | Description |
+| :--- | :--- | :--- | :--- |
+| `add_payment_info/session` | `add_payment_info` | `session` | Conversion to adding payment information per session |
+| `add_shipping_info/session` | `add_shipping_info` | `session` | Conversion to adding shipping information per session |
+| `begin_checkout/session` | `begin_checkout` | `session` | Conversion to beginning the checkout process per session |
+| `new_account/session` | `new account` | `session` | Conversion to new account creation per session |

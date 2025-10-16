@@ -1,4 +1,4 @@
-# SQL-requests
+
 # SQL Query: Session, Event, and Order Analysis
 
 ## Description
